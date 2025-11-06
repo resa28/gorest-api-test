@@ -1,0 +1,14 @@
+{
+  "name": "gorest-api-test",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "cucumber-js --require ./steps/**/*.js"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.0.0",
+    "@playwright/test": "^1.48.0",
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.5"
+  }
+}
