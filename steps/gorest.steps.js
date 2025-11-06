@@ -15,9 +15,9 @@ When("I send a POST request to create a new user", async () => {
   response = await axios.post(
     `${BASE_URL}/users`,
     {
-      name: "Latif QA Automation",
-      gender: "male",
-      email: `latif_${Date.now()}@mail.com`,
+      name: "Resa QA Automation",
+      gender: "female",
+      email: `resa_${Date.now()}@mail.com`,
       status: "active",
     },
     { headers: { Authorization: TOKEN } }
@@ -44,7 +44,7 @@ Given("I have a valid user ID", async () => {
       `${BASE_URL}/users`,
       {
         name: "Temporary User",
-        gender: "male",
+        gender: "female",
         email: `temp_${Date.now()}@mail.com`,
         status: "active",
       },
@@ -72,7 +72,7 @@ Then("the response should contain the correct user name", async () => {
 When("I send a PUT request to update the user details", async () => {
   response = await axios.put(
     `${BASE_URL}/users/${userId}`,
-    { name: "Latif QA Updated" },
+    { name: "Resa QA Updated" },
     { headers: { Authorization: TOKEN } }
   );
   console.log("PUT Response:", response.data);
@@ -80,5 +80,5 @@ When("I send a PUT request to update the user details", async () => {
 
 Then("the response should contain the updated name", async () => {
   console.log("Updated Name:", response.data.name);
-  expect(response.data.name).toBe("Latif QA Updated");
+  expect(response.data.name).toBe("Resa QA Updated");
 });
